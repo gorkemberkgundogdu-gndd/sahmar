@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. JSON Verisini Çekme
     if (productGrid) {
-        fetch('assets/js/products.json')
+        fetch('assets/js/products.json.json')
             .then(response => response.json())
             .then(data => {
                 allShirts = data.shirts;
