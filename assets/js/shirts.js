@@ -2,97 +2,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const productGrid = document.getElementById('product-grid');
     const brandFiltersContainer = document.getElementById('brand-filters');
 
-    // Vercel dosya uzantısı hatası almamak için veriyi direkt JS içine aldık:
+    // Yüklediğin tüm fotoğrafları ayrı birer ürün olarak listeliyoruz
     const data = {
       "shirts": [
-        {
-          "id": 1,
-          "brand": "Lacoste",
-          "name": "Short Sleeve Button-Down",
-          "price": 1399.99,
-          "colors": [
-            {"name": "Black", "imageUrlFront": "b.jpeg", "imageUrlBack": "WhatsApp Image 2026-04-05 at 23.11.58 (1).jpeg"},
-            {"name": "Beige", "imageUrlFront": "22.jpeg", "imageUrlBack": null},
-            {"name": "Yellow", "imageUrlFront": "11.jpeg", "imageUrlBack": null},
-            {"name": "White", "imageUrlFront": "WhatsApp Image 2026-04-05 at 23.11.58.jpeg", "imageUrlBack": null}
-          ],
-          "defaultColorIndex": 0
-        },
-        {
-          "id": 2,
-          "brand": "Lacoste",
-          "name": "Long Sleeve Oxford",
-          "price": 1599.99,
-          "colors": [
-            {"name": "White", "imageUrlFront": "WhatsApp Image 2026-04-05 at 23.11.58 (2).jpeg", "imageUrlBack": null}
-          ],
-          "defaultColorIndex": 0
-        },
-        {
-          "id": 3,
-          "brand": "Tommy Hilfiger",
-          "name": "Short Sleeve Shirt",
-          "price": 1299.99,
-          "colors": [
-            {"name": "Navy Blue", "imageUrlFront": "ee.jpeg", "imageUrlBack": null},
-            {"name": "White", "imageUrlFront": "s.jpeg", "imageUrlBack": null},
-            {"name": "Dark Navy", "imageUrlFront": "t.jpeg", "imageUrlBack": null}
-          ],
-          "defaultColorIndex": 0
-        },
-        {
-          "id": 4,
-          "brand": "Tommy Hilfiger",
-          "name": "Long Sleeve Shirt",
-          "price": 1499.99,
-          "colors": [
-            {"name": "Light Blue", "imageUrlFront": "4.jpeg", "imageUrlBack": null},
-            {"name": "Beige", "imageUrlFront": "3.jpeg", "imageUrlBack": null},
-            {"name": "Black", "imageUrlFront": "g.jpeg", "imageUrlBack": null},
-            {"name": "White", "imageUrlFront": "v.jpeg", "imageUrlBack": null}
-          ],
-          "defaultColorIndex": 0
-        },
-        {
-          "id": 5,
-          "brand": "Ralph Lauren",
-          "name": "Polo Button-Down",
-          "price": 1899.99,
-          "colors": [
-            {"name": "Grey", "imageUrlFront": "asdfg.jpeg", "imageUrlBack": null},
-            {"name": "Dark Blue", "imageUrlFront": "fsd.jpeg", "imageUrlBack": null},
-            {"name": "Light Blue", "imageUrlFront": "re.jpeg", "imageUrlBack": null},
-            {"name": "Pink", "imageUrlFront": "as.jpeg", "imageUrlBack": null},
-            {"name": "Beige", "imageUrlFront": "222221.jpeg", "imageUrlBack": null},
-            {"name": "White", "imageUrlFront": "WhatsApp Image 2026-04-05 at 23.12.02.jpeg", "imageUrlBack": null}
-          ],
-          "defaultColorIndex": 0
-        },
-        {
-          "id": 6,
-          "brand": "Gant",
-          "name": "Broadcloth Oxford",
-          "price": 1199.99,
-          "colors": [
-            {"name": "Beige", "imageUrlFront": "ddddd.jpeg", "imageUrlBack": null},
-            {"name": "Light Blue", "imageUrlFront": "dd.jpeg", "imageUrlBack": null},
-            {"name": "Royal Blue", "imageUrlFront": "d.jpeg", "imageUrlBack": null},
-            {"name": "White", "imageUrlFront": "33.jpeg", "imageUrlBack": "3333.jpeg"}
-          ],
-          "defaultColorIndex": 0
-        }
+        // LACOSTE
+        { id: 1, brand: "Lacoste", name: "Classic Oxford - Black", price: 59.00, colors: [{"imageUrlFront": "b.jpeg", "imageUrlBack": "bb.jpeg"}], defaultColorIndex: 0 },
+        { id: 2, brand: "Lacoste", name: "Classic Oxford - Beige", price: 59.00, colors: [{"imageUrlFront": "22.jpeg", "imageUrlBack": "2.jpeg"}], defaultColorIndex: 0 },
+        { id: 3, brand: "Lacoste", name: "Classic Oxford - Yellow", price: 59.00, colors: [{"imageUrlFront": "11.jpeg", "imageUrlBack": "111.jpeg"}], defaultColorIndex: 0 },
+        { id: 4, brand: "Lacoste", name: "Classic Oxford - Light Blue", price: 59.00, colors: [{"imageUrlFront": "WhatsApp Image 2026-04-05 at 23.11.58 (1).jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        { id: 5, brand: "Lacoste", name: "Classic Oxford - Pink", price: 59.00, colors: [{"imageUrlFront": "WhatsApp Image 2026-04-05 at 23.11.58.jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        { id: 6, brand: "Lacoste", name: "Classic Oxford - Navy", price: 59.00, colors: [{"imageUrlFront": "WhatsApp Image 2026-04-05 at 23.11.58 (2).jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        
+        // TOMMY HILFIGER
+        { id: 7, brand: "Tommy Hilfiger", name: "Tailored Fit - Navy Blue", price: 59.00, colors: [{"imageUrlFront": "ee.jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        { id: 8, brand: "Tommy Hilfiger", name: "Tailored Fit - Yellow", price: 59.00, colors: [{"imageUrlFront": "s.jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        { id: 9, brand: "Tommy Hilfiger", name: "Tailored Fit - Black", price: 59.00, colors: [{"imageUrlFront": "t.jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        { id: 10, brand: "Tommy Hilfiger", name: "Tailored Fit - Light Blue", price: 59.00, colors: [{"imageUrlFront": "4.jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        { id: 11, brand: "Tommy Hilfiger", name: "Tailored Fit - Pink", price: 59.00, colors: [{"imageUrlFront": "g.jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        { id: 12, brand: "Tommy Hilfiger", name: "Tailored Fit - Classic Blue", price: 59.00, colors: [{"imageUrlFront": "v.jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+
+        // RALPH LAUREN
+        { id: 13, brand: "Ralph Lauren", name: "Polo Button-Down - Grey", price: 59.00, colors: [{"imageUrlFront": "asdfg.jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        { id: 14, brand: "Ralph Lauren", name: "Polo Button-Down - Dark Blue", price: 59.00, colors: [{"imageUrlFront": "fsd.jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        { id: 15, brand: "Ralph Lauren", name: "Polo Button-Down - Light Blue", price: 59.00, colors: [{"imageUrlFront": "re.jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        { id: 16, brand: "Ralph Lauren", name: "Polo Button-Down - Pink", price: 59.00, colors: [{"imageUrlFront": "as.jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        { id: 17, brand: "Ralph Lauren", name: "Polo Button-Down - Beige", price: 59.00, colors: [{"imageUrlFront": "222221.jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        { id: 18, brand: "Ralph Lauren", name: "Polo Button-Down - White", price: 59.00, colors: [{"imageUrlFront": "WhatsApp Image 2026-04-05 at 23.12.02.jpeg", "imageUrlBack": "WhatsApp Image 2026-04-05 at 23.12.02 (1).jpeg"}], defaultColorIndex: 0 },
+
+        // GANT
+        { id: 19, brand: "Gant", name: "Broadcloth Oxford - Beige", price: 59.00, colors: [{"imageUrlFront": "ddddd.jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        { id: 20, brand: "Gant", name: "Broadcloth Oxford - Light Blue", price: 59.00, colors: [{"imageUrlFront": "dd.jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        { id: 21, brand: "Gant", name: "Broadcloth Oxford - Royal Blue", price: 59.00, colors: [{"imageUrlFront": "d.jpeg", "imageUrlBack": null}], defaultColorIndex: 0 },
+        { id: 22, brand: "Gant", name: "Broadcloth Oxford - White", price: 59.00, colors: [{"imageUrlFront": "33.jpeg", "imageUrlBack": "3333.jpeg"}], defaultColorIndex: 0 }
       ]
     };
 
     let allShirts = data.shirts;
 
-    // Fetch işlemini iptal ettik, veriler doğrudan ekrana basılıyor
     if (productGrid) {
         renderProductGrid(allShirts);
         renderBrandFilters(allShirts);
     }
 
-    // 2. Ürünleri Grid Yapısında Ekrana Basma
+    // Ürünleri Grid Yapısında Ekrana Basma
     function renderProductGrid(shirts) {
         let htmlContent = '';
         shirts.forEach(shirt => {
@@ -109,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="flex flex-col space-y-2 text-center">
                         <span class="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-bold">${shirt.brand}</span>
                         <h3 class="text-sm font-medium tracking-tight text-gray-800">${shirt.name}</h3>
-                        <p class="text-sm font-bold text-black">${shirt.price.toFixed(2)} TL</p>
+                        <p class="text-sm font-bold text-black">$${shirt.price.toFixed(2)}</p>
                     </div>
                 </div>
             `;
@@ -118,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setupRevealOnScroll();
     }
 
-    // 3. Marka Filtre Menüsünü Otomatik Oluşturma
+    // Marka Filtre Menüsünü Otomatik Oluşturma
     function renderBrandFilters(shirts) {
         const uniqueBrands = [...new Set(shirts.map(shirt => shirt.brand))];
         let brandFiltersHtml = `
@@ -138,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         brandFiltersContainer.innerHTML = brandFiltersHtml;
     }
 
-    // 4. Filtreleme Fonksiyonu
+    // Filtreleme Fonksiyonu
     window.filterProducts = function(brandName) {
         const filtered = (brandName === 'all') 
             ? allShirts 
