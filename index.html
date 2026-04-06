@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahmar Shopping</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <nav id="navbar" class="fixed w-full top-0 z-50 bg-white transition-all duration-300 px-6 py-4 flex justify-between items-center">
+        <a href="#" class="font-bold text-xl tracking-tight">sahmar shopping</a>
+        <div class="hidden md:flex space-x-8 text-sm text-gray-600">
+            <a href="#" class="hover:text-black">Home</a>
+            <a href="#" class="hover:text-black">Catalog</a>
+            <a href="#" class="hover:text-black">Contact</a>
+        </div>
+        <div class="flex space-x-4">
+            <button aria-label="Search"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+            <button aria-label="Profile"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg></button>
+            <button aria-label="Cart"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg></button>
+        </div>
+    </nav>
+
+    <section class="reveal pt-24 min-h-screen flex flex-col md:flex-row items-center px-6 md:px-12">
+        <div class="w-full md:w-1/2 md:pr-10 mb-10 md:mb-0">
+            <h1 class="text-6xl md:text-8xl font-bold leading-none tracking-tight">Elevate Your<br>Wardrobe</h1>
+        </div>
+        <div class="w-full md:w-1/2">
+            <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=1200&auto=format&fit=crop" alt="Hero Model" class="w-full h-auto object-cover">
+        </div>
+    </section>
+
+    <section class="reveal grid grid-cols-1 md:grid-cols-2 h-[70vh]">
+        <div class="relative group overflow-hidden bg-gray-900">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop" alt="T-Shirts" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 flex flex-col items-center justify-between py-16">
+                <h2 class="text-white text-2xl font-semibold tracking-wide">T-Shirts</h2>
+                <a href="#" class="bg-white/90 text-black px-8 py-3 text-sm hover:bg-white transition-colors">Shop now</a>
+            </div>
+        </div>
+        <div class="relative group overflow-hidden bg-gray-200">
+            <img src="https://images.unsplash.com/photo-1596755094514-f87e32f85e2c?q=80&w=800&auto=format&fit=crop" alt="Shirts" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 flex flex-col items-center justify-between py-16">
+                <h2 class="text-white text-2xl font-semibold tracking-wide drop-shadow-md">Shirts</h2>
+                <a href="#" class="bg-white/90 text-black px-8 py-3 text-sm hover:bg-white transition-colors">Shop now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal flex flex-col md:flex-row h-auto md:h-[80vh]">
+        <div class="w-full md:w-1/2 bg-[#A3E4A8] flex items-center justify-center p-12">
+            <div class="bg-[#F3F4F6] w-full h-full flex flex-col items-center justify-center relative">
+                <img src="https://cdn-icons-png.flaticon.com/512/863/863684.png" alt="T-Shirt Icon" class="w-48 h-auto mb-4">
+                <div class="absolute bottom-4 text-xs font-bold tracking-widest">19.99TL</div>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2">
+            <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?q=80&w=800&auto=format&fit=crop" alt="Models" class="w-full h-full object-cover grayscale">
+        </div>
+    </section>
+
+    <section class="reveal bg-[#F5EFE6] py-24 px-6 text-center flex flex-col items-center">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&auto=format&fit=crop" alt="Brand Vision" class="w-64 h-auto object-cover mb-12 shadow-lg grayscale">
+        <h2 class="text-3xl md:text-5xl font-bold max-w-4xl leading-tight mb-8">
+            At SahmarShopping, we believe in the transformative power of timeless design and exceptional quality.
+        </h2>
+        <a href="#" class="text-sm font-semibold border-b border-black pb-1 hover:text-gray-600 hover:border-gray-600 transition-colors">Shop now &rarr;</a>
+    </section>
+
+    <footer class="border-t border-gray-200 py-16 px-6 md:px-12 bg-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <h3 class="text-2xl font-semibold mb-6">Main menu</h3>
+                <ul class="space-y-3 text-sm text-gray-600">
+                    <li><a href="#" class="hover:text-black">Home</a></li>
+                    <li><a href="#" class="hover:text-black">Catalog</a></li>
+                    <li><a href="#" class="hover:text-black">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-transparent mb-6 hidden md:block">Links</h3>
+                <ul class="space-y-3 text-sm text-[#1A4E38]">
+                    <li><a href="#" class="hover:underline">About us</a></li>
+                    <li><a href="#" class="hover:underline">Return policy</a></li>
+                    <li><a href="#" class="hover:underline">Help & Questions</a></li>
+                </ul>
+            </div>
+            <div class="md:col-span-2">
+                <h3 class="text-2xl font-semibold mb-6">Join Our Circle</h3>
+                <form class="flex flex-col sm:flex-row border border-[#1A4E38]">
+                    <input type="email" placeholder="Email address" class="flex-grow p-4 outline-none text-sm placeholder-gray-500">
+                    <button type="submit" class="bg-[#1A4E38] text-white px-8 py-4 text-sm font-semibold hover:bg-[#123626] transition-colors">Sign up</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

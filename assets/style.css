@@ -1,0 +1,17 @@
+/* Görünür olma animasyonu için başlangıç durumu */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+/* JavaScript ile eklenecek class */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navbar gölge efekti */
+.navbar-scrolled {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
